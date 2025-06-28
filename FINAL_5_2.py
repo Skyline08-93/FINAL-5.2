@@ -783,7 +783,7 @@ def find_opportunities(all_prices):
 
                 signal_key = f"{symbol}_{buy_ex}_{sell_ex}_{round(net_spread, 2)}"
 
-                if 0.5 <= net_spread <= 300 and signal_key not in sent_signals:
+                if 0.1 <= net_spread <= 10 and signal_key not in sent_signals:
                     message = (
                         f"📌 {symbol}\n"
                         f"Spread: +{net_spread:.2f}%\n\n"
